@@ -34,7 +34,6 @@ jobs:
         with:
           scan-type: 'config'
           scan-ref: 'environments'
-          scanners: 'vuln,secret,config'
           hide-progress: false
           format: 'sarif'
           output: 'trivy-results.sarif'

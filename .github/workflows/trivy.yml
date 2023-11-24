@@ -17,7 +17,7 @@ jobs:
       uses: aquasecurity/trivy-action@0.14.0
       with:
         scan-type: 'config'
-        input: './environments'
+        scan-ref: './environments'
         format: 'sarif'
         output: 'trivy-results-tf.sarif'
 

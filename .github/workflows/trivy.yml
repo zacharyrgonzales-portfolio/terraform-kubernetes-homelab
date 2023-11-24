@@ -35,7 +35,7 @@ jobs:
           scan-type: 'config'
           scan-ref: './environments'
           format: 'sarif'
-          output: 'trivy-results-tf.sarif'
+          output: 'trivy-results.sarif'
           exit-code: '1'
           ignore-unfixed: true
 

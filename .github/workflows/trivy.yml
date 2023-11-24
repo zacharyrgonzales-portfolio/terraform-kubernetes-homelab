@@ -32,7 +32,7 @@ jobs:
       - name: Run Trivy vulnerability scanner
         uses: aquasecurity/trivy-action@master
         with:
-          scan-type: 'config'
+          scan-type: 'repo'
           scan-ref: './environments'
           format: 'sarif'
           output: 'trivy-results.sarif'

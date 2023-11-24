@@ -1,0 +1,28 @@
+# kind-full-config.yaml
+kind: Cluster
+apiVersion: kind.x-k8s.io/v1alpha4
+# Specifies the cluster name
+name: hlb-dev
+# Networking settings
+networking:
+  disableDefaultCNI: true
+  podSubnet: "10.0.0.0/16"
+  serviceSubnet: "10.1.0.0/16"
+  # kubeProxyMode: "iptables" # Kube-proxy mode (iptables or ipvs)
+  # ipFamily: "ipv4" # IP family (ipv4 or ipv6)
+# Node settings
+nodes:
+  - role: control-plane
+    image: kindest/node:v1.28.0 # Specify the node image
+    # extraMounts:
+    #   - hostPath: /var/lib/kind
+    #     containerPath: /var/lib/kind
+    # extraPortMappings:
+    #   - containerPort: 80
+    #     hostPort: 80
+    #     listenAddress: "127.0.0.1"
+    #     protocol: TCP
+  - role: worker
+    image: kindest/node:v1.28.0 
+  - role: worker
+    image: kindest/node:v1.28.0 
